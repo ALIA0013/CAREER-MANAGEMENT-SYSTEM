@@ -1,0 +1,95 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>DASHBOARD</title> 
+    <link rel="stylesheet" href="DS.css"> 
+</head> 
+  <body>
+    <header><h1>CAREER INFORMATION MANAGEMENT SYSTEM</h1></header> 
+  
+    <div class="main-container"> 
+        <div class="navcontainer"> 
+            <nav class="nav"> 
+                <div class="nav-upper-options"> 
+                    <div class="nav-option option1" onclick="navigateToDashboardPage()">
+                        <img src= "IMAGES/dashboard.png" class="nav-img" alt="dashboard"> 
+                        <h3> Dashboard</h3> 
+                    </div> 
+  
+                    <div class="nav-option option2" onclick="navigateToJobSeekerPage()">
+                        <img src="IMAGES/interviewer.png" class="nav-img" alt="JobSeeker"> 
+                        <h3>Job Seeker</h3> 
+                    </div> 
+
+                    <div class="nav-option option3" onclick="navigateToJobPostPage()"> 
+                        <img src="IMAGES/add.png" class="nav-img" alt="JobPost"> 
+                        <h3> Job Posts</h3> 
+                    </div> 
+                    
+                    <div class="nav-option option4" onclick="navigateToMarksPage()"> 
+                        <img src="IMAGES/briefcase.png" class="nav-img" alt="Marks"> 
+                        <h3> Marks</h3> 
+                    </div> 
+                    
+                    <div class="nav-option option5" onclick="navigateToCandidatePage()"> 
+                        <img src="IMAGES/politician.png" class="nav-img" alt="Candidate"> 
+                        <h3> Candidate</h3> 
+                    </div>                    
+  
+                    <div class="nav-option option6" onclick="navigateToReportsPage()"> 
+                        <img src="IMAGES/financial-report.png" class="nav-img" alt="Reports"> 
+                        <h3>Reports</h3> 
+                    </div>                    
+  
+                    <div class="nav-option logout" onclick="logout()"> 
+                        <img src="IMAGES/log-out.png" class="nav-img" alt="logout"> 
+                        <h3>Logout</h3> 
+                    </div>                                       
+                </div> 
+            </nav> 
+        </div> 
+        <div class="main"> 
+            <div class="box-container"> 
+  
+                <div class="box box1"> 
+                    <div class="text"> 
+                        <h2 class="topic-heading">150</h2> 
+                        <h2 class="topic">Total Job Seekers</h2> 
+                    </div> 
+  
+                    <img src= "IMAGES/interviewer.png" alt="Views"> 
+                </div> 
+  
+                <div class="box box2"> 
+                    <div class="text"> 
+                        <h2 class="topic-heading">3</h2> 
+                        <h2 class="topic">Total Job Posts</h2> 
+                    </div> 
+                    <img src= "IMAGES/add.png" alt="likes"> 
+                </div> 
+  
+                <div class="box box3"> 
+                    <div class="text"> 
+                        <h2 class="topic-heading">50</h2> 
+                        <h2 class="topic">Total Candidates</h2> 
+                    </div> 
+                    <img src= "IMAGES/politician.png"alt="comments"> 
+                </div> 
+  
+                <div class="box box4"> 
+                    <div class="text"> 
+                        <h2 class="topic-heading">1</h2> 
+                        <h2 class="topic">Total Admin</h2> 
+                    </div> 
+                    <img src= "IMAGES/settings.png" alt="published"> 
+                </div> 
+            </div> 
+        </div>
+    </div> 
+    <script src="DS.js"></script>
+   </body> 
+</html>   

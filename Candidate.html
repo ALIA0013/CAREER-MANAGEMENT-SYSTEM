@@ -1,0 +1,214 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>JOB TERTIARY</title> 
+    <link rel="stylesheet" href="DS.css"> 
+</head> 
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); 
+
+  body {
+  font-family: "Poppins", sans-serif; 
+  --background-color4: #cad7fda4;
+  background-color: var(--background-color4); 
+  max-width: 100%; 
+  margin: 0;
+  padding: 0;
+  }
+
+  .container {
+    max-width: 1150px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+
+  h2{
+    margin-top: 15px;
+  }
+
+  nav {
+    text-align: center;
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav ul a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #ddd;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  nav ul a:hover {
+    background-color: #bbb;
+  }
+
+  fieldset {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  legend {
+    font-weight: bold;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  #candidate-data-table {
+    width: 98%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+
+  #candidate-data-table th,
+  #candidate-data-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+
+  #candidate-data-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  #candidate-data-table td {
+    text-align: center;
+  }
+
+  #candidate-data-table tr:hover {
+    background-color: #ddd;
+  }
+
+  #candidate-data-table button {
+    width: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5500cb;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+    
+  }
+
+  #candidate-data-table button:hover {
+    background-color: #0056b3;
+  }
+</style>
+
+<body> 
+    <header><h1>CAREER INFORMATION MANAGEMENT SYSTEM</h1></header>
+  
+    <div class="main-container"> 
+        <div class="navcontainer"> 
+            <nav class="nav"> 
+                <div class="nav-upper-options"> 
+                    <div class="nav-option option1" onclick="navigateToDashboardPage()">
+                      <img src= "IMAGES/dashboard.png" class="nav-img" alt="dashboard"> 
+                      <h3>Dashboard</h3> 
+                    </div> 
+  
+                    <div class="nav-option option2" onclick="navigateToJobSeekerPage()">
+                        <img src="IMAGES/interviewer.png" class="nav-img" alt="JobSeeker"> 
+                        <h3>Job Seeker</h3> 
+                    </div> 
+
+                    <div class="nav-option option3" onclick="navigateToJobPostPage()"> 
+                        <img src="IMAGES/add.png" class="nav-img" alt="JobPost"> 
+                        <h3>Job Posts</h3> 
+                    </div> 
+                    
+                    <div class="nav-option option4" onclick="navigateToMarksPage()"> 
+                        <img src="IMAGES/briefcase.png" class="nav-img" alt="Marks"> 
+                        <h3>Marks</h3> 
+                    </div> 
+                    
+                    <div class="nav-option option5" onclick="navigateToCandidatePage()"> 
+                        <img src="IMAGES/politician.png" class="nav-img" alt="Candidate"> 
+                        <h3>Candidate</h3> 
+                    </div>                    
+  
+                    <div class="nav-option option6" onclick="navigateToReportsPage()"> 
+                        <img src="IMAGES/financial-report.png" class="nav-img" alt="Reports"> 
+                        <h3>Reports</h3> 
+                    </div>                    
+  
+                    <div class="nav-option logout" onclick="logout()"> 
+                        <img src="IMAGES/log-out.png" class="nav-img" alt="logout"> 
+                        <h3>Logout</h3> 
+                    </div>                                       
+                </div> 
+            </nav> 
+        </div> 
+        <div class="main"> 
+        <div class="container">
+          <h1>Select Candidate</h1>
+              <!-- Candidate Data Section -->
+              <div class="candidatecontainer">
+                <div class="candidate-form">
+                    <label for="jobPost">Job Post</label>
+                    <select id="jobPost">
+                        <option value="">Choose Job Post</option>
+                        <option value="">Software Developer</option>
+                        <option value="">Marketing Manager</option>
+                        <option value="">Human Resources Specialist</option>
+                    </select>
+                    <button onclick="">Data Process</button>
+                    <div class="candidate-data">
+                        <h2>Candidate Data</h2>
+                        <table id="candidate-data-table">
+                            <thead>
+                                  <tr>
+                                    <th>EP Number</th>
+                                    <th>Full Name</th>
+                                    <th>Age</th>
+                                    <th>Gender</th>
+                                    <th>Address</th>
+                                    <th>Contact Number</th>
+                                  </tr>
+                            </thead>
+                            <tbody id="candidate-data-body">
+                                <!-- Candidate data will be displayed here -->
+                            </tbody>
+                        </table>                
+                    </div>              
+                </div>
+              </div>              
+            </div>
+            <script src="Candidate.js"></script>
+            <script src="DS.js"></script>
+        </div>
+      </div>
+    </div>
+</body> 
+</html>

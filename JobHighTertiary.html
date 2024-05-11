@@ -1,0 +1,305 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>JOB HIGHER TERTIARY</title> 
+    <link rel="stylesheet" href="DS.css"> 
+</head> 
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); 
+
+  body {
+  font-family: "Poppins", sans-serif; 
+  --background-color4: #cad7fda4;
+  background-color: var(--background-color4); 
+  max-width: 100%; 
+  margin: 0;
+  padding: 0;
+  }
+
+  .container {
+    max-width: 1150px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+
+  nav {
+    text-align: center;
+  }
+
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav ul a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #ddd;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  nav ul a:hover {
+    background-color: #bbb;
+  }
+
+  fieldset {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  legend {
+    font-weight: bold;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .exam-container {
+    margin-top: 20px;
+  }
+
+  .exam-container h2 {
+    margin-bottom: 10px;
+  }
+
+  .exam-form {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .exam-fieldset {
+    flex: 1;
+    margin-right: 20px;
+  }
+
+  .exam-fieldset legend {
+    margin-bottom: 10px;
+  }
+
+  .exam-fieldset label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .exam-fieldset input[type="text"],
+  .exam-fieldset input[type="number"],
+  .exam-fieldset select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+
+  .exam-fieldset .buttons {
+    text-align: center;
+  }
+
+  .exam-fieldset .buttons button {
+    width: 100px;  
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color:  #5500cb;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+  }
+
+  .exam-fieldset .buttons button:hover {
+    background-color: #0056b3;
+  }
+
+  /* CSS for examination data table */
+  #exam-data-table {
+    width: 98%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  #exam-data-table th,
+  #exam-data-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+
+  #exam-data-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  #exam-data-table td {
+    text-align: center;
+  }
+
+  #exam-data-table tr:hover {
+    background-color: #ddd;
+  }
+
+  #exam-data-table button {
+    width: 100px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5500cb;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+    
+  }
+
+  #exam-data-table button:hover {
+    background-color: #0056b3;
+  }
+</style>
+
+<body> 
+    <header><h1>CAREER INFORMATION MANAGEMENT SYSTEM</h1></header>
+  
+    <div class="main-container"> 
+        <div class="navcontainer"> 
+            <nav class="nav"> 
+                <div class="nav-upper-options"> 
+                    <div class="nav-option option1" onclick="navigateToDashboardPage()">
+                      <img src= "IMAGES/dashboard.png" class="nav-img" alt="dashboard"> 
+                      <h3>Dashboard</h3> 
+                    </div> 
+  
+                    <div class="nav-option option2" onclick="navigateToJobSeekerPage()">
+                        <img src="IMAGES/interviewer.png" class="nav-img" alt="JobSeeker"> 
+                        <h3>Job Seeker</h3> 
+                    </div> 
+
+                    <div class="nav-option option3" onclick="navigateToJobPostPage()"> 
+                        <img src="IMAGES/add.png" class="nav-img" alt="JobPost"> 
+                        <h3>Job Posts</h3> 
+                    </div> 
+                    
+                    <div class="nav-option option4" onclick="navigateToMarksPage()"> 
+                        <img src="IMAGES/briefcase.png" class="nav-img" alt="Marks"> 
+                        <h3>Marks</h3> 
+                    </div> 
+                    
+                    <div class="nav-option option5" onclick="navigateToCandidatePage()"> 
+                        <img src="IMAGES/politician.png" class="nav-img" alt="Candidate"> 
+                        <h3>Candidate</h3> 
+                    </div>                    
+  
+                    <div class="nav-option option6" onclick="navigateToReportsPage()"> 
+                        <img src="IMAGES/financial-report.png" class="nav-img" alt="Reports"> 
+                        <h3>Reports</h3> 
+                    </div>                    
+  
+                    <div class="nav-option logout" onclick="logout()"> 
+                        <img src="IMAGES/log-out.png" class="nav-img" alt="logout"> 
+                        <h3>Logout</h3> 
+                    </div>                                       
+                </div> 
+            </nav> 
+        </div> 
+        <div class="main"> 
+        <div class="container">
+          <h1>Add Job Seeker</h1>
+            <nav>
+              <ul>
+                <a href="JobPersonalData.html">Personal Data</a>
+                <a href="JobSecondary.html"> Secondary Examination Data</a>
+                <!--<a href="JobTertiary.html">Pre-Tertiary Examination Data</a>-->
+                <a href="JobHighTertiary.html">Tertiary Examination Data</a>
+              </ul>
+            </nav>
+        
+              <!-- Examination Data Section -->
+              <div class="exam-container">
+                <div class="exam-form">
+                    <fieldset class="exam-fieldset">
+                        <legend>Diploma/Bachelor/Master/PhD Examination Data</legend>
+                        <label for="id">Employee Number</label>
+                        <input type="text" id="id" placeholder="Enter Employee Number">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Enter Full Name">
+                        <label for="institute">Institute</label>
+                        <input type="text" id="institute" placeholder="Enter Institute">
+                        <label for="level">Level of Education</label>
+                        <select id="level">
+                            <option value="">Select Level of Education</option>
+                            <option value="">Diploma</option>
+                            <option value="">Bachelor's Degrees</option>
+                            <option value="">Master's Degrees</option>
+                            <option value="">Doctoral Degrees (PhD)</option>
+                        </select>
+                        <label for="degreeType">Degree Type</label>
+                        <select id="degreeType">
+                            <option value="">Select Degree Type</option>
+                            <option value="">Accounting</option>
+                            <option value="">Software Engeneering</option>
+                            <option value="">Management</option>
+                            <option value="">Marketing</option>
+                        </select>
+                        <label for="degreeName">Degree Name</label>
+                        <input type="text" id="degreeName" placeholder="Enter Degree Name">
+                        <label for="cgpa">CGPA</label>
+                        <input type="number" id="cgpa" placeholder="Enter CGPA">
+                        <div class="buttons">
+                            <button onclick="addExamData('Degree')">Add</button>
+                            <button onclick="clearFields()">Clear</button>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="exam-data">
+                  <h2>Examination Data</h2>
+                  <table id="exam-data-table">
+                      <thead>
+                          <tr>
+                              <th>EP Number</th>
+                              <th>Full Name</th>
+                              <th>Institute</th>
+                              <th>Level of Education</th>
+                              <th>Degree Type</th>
+                              <th>Degree Name</th>
+                              <th>CGPA</th>
+                              <th>Action</th> <!-- Added column for delete button -->
+                          </tr>
+                      </thead>
+                      <tbody id="exam-data-body">
+                          <!-- Examination data will be displayed here -->
+                      </tbody>
+                  </table>
+              </div>              
+            </div>
+            <script src="JobHighTertiary.js"></script>
+            <script src="DS.js"></script>
+        </div>
+      </div>
+    </div>
+</body> 
+</html>

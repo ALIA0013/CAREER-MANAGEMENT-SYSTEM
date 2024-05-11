@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JOB POST</title>
+  <link rel="stylesheet" href="JobPost.css">
+  <link rel="stylesheet" href="DS.css">
+</head>
+<body>
+  <header><h1>CAREER INFORMATION MANAGEMENT SYSTEM</h1></header> 
+
+  <div class="main-container"> 
+    <div class="navcontainer"> 
+      <nav class="nav"> 
+        <div class="nav-upper-options"> 
+            <div class="nav-option option1" onclick="navigateToDashboardPage()">
+                <img src= "IMAGES/dashboard.png" class="nav-img" alt="dashboard"> 
+                <h3>Dashboard</h3> 
+            </div> 
+
+            <div class="nav-option option2" onclick="navigateToJobSeekerPage()">
+                <img src="IMAGES/interviewer.png" class="nav-img" alt="JobSeeker"> 
+                <h3>Job Seeker</h3> 
+            </div> 
+
+            <div class="nav-option option3" onclick="navigateToJobPostPage()"> 
+                <img src="IMAGES/add.png" class="nav-img" alt="JobPost"> 
+                <h3>Job Posts</h3> 
+            </div> 
+            
+            <div class="nav-option option4" onclick="navigateToMarksPage()"> 
+                <img src="IMAGES/briefcase.png" class="nav-img" alt="Marks"> 
+                <h3>Marks</h3> 
+            </div> 
+            
+            <div class="nav-option option5" onclick="navigateToCandidatePage()"> 
+                <img src="IMAGES/politician.png" class="nav-img" alt="Candidate"> 
+                <h3>Candidate</h3> 
+            </div>                    
+
+            <div class="nav-option option6" onclick="navigateToReportsPage()"> 
+                <img src="IMAGES/financial-report.png" class="nav-img" alt="Reports"> 
+                <h3>Reports</h3> 
+            </div>                    
+
+            <div class="nav-option logout" onclick="logout()"> 
+                <img src="IMAGES/log-out.png" class="nav-img" alt="logout"> 
+                <h3>Logout</h3> 
+            </div>                                     
+        </div> 
+      </nav> 
+    </div> 
+   
+  <div class="main"> 
+   <div class="container">
+    <h1>Create Job Post</h1>
+    <div class="form-container">
+      <label for="job-title">Job Title</label>
+      <input type="text" id="job-title" placeholder="Enter Job Title">
+      <label for="job-department">Job Department</label>
+      <input type="text" id="job-department" placeholder="Enter Job Department">
+      <div class="buttons">
+        <button onclick="addJobPost(), saveEditedJobPost()">Add</button>
+        <button onclick="clearFields()">Clear</button>
+      </div>
+    </div>
+    <div class="job-posts">
+      <h2>Job Posts</h2>
+      <table id="job-posts-table">
+        <thead>
+          <tr>
+            <th>Job Title</th>
+            <th>Job Department</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="job-posts-body">
+          <!-- Job posts will be displayed here -->
+        </tbody>
+      </table>
+    </div>
+   </div>
+  </div>
+  </div>
+  <script src="JobPost.js"></script>
+  <script src="DS.js"></script>
+</body>
+</html>
+
+
+
